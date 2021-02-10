@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile("javax.cache:cache-api:1.1.0")
+
+    compile("org.springframework:spring-core:$springVersion")
+    compile("org.springframework:spring-beans:$springVersion")
+    compile("org.springframework:spring-context:$springVersion")
+    compile("org.springframework:spring-context-support:$springVersion")
+    compile("org.springframework:spring-jdbc:$springVersion")
+    compile("org.springframework:spring-tx:$springVersion")
+
+    compile("com.h2database:h2:1.4.197")
+    compile("org.apache.ignite:ignite-core:$igniteVersion")
+    compile("org.apache.ignite:ignite-spring:$igniteVersion")
+    compile("org.apache.ignite:ignite-log4j2:$igniteVersion")
+    compile("org.apache.ignite:ignite-indexing:$igniteVersion")
+
+    // Apache Ignite Web Agent
+    compile("org.apache.ignite:ignite-rest-http:$igniteVersion")
+    compile("org.gridgain:ignite-shmem:1.0.0")
+    compile("com.fasterxml.jackson.core:jackson-annotations:2.9.10")
+    compile("com.fasterxml.jackson.core:jackson-core:2.9.10")
+    compile("com.fasterxml.jackson.core:jackson-databind:2.9.10")
+    compile("javax.servlet:javax.servlet-api:3.1.0")
+    compile("commons-lang:commons-lang:2.6")
+    compile("org.eclipse.jetty:jetty-continuation:9.4.25.v20191220")
+    compile("org.eclipse.jetty:jetty-http:9.4.25.v20191220")
+    compile("org.eclipse.jetty:jetty-io:9.4.25.v20191220")
+    compile("org.eclipse.jetty:jetty-server:9.4.25.v20191220")
+    compile("org.eclipse.jetty:jetty-util:9.4.25.v20191220")
+    compile("org.eclipse.jetty:jetty-xml:9.4.25.v20191220")
+
+    // Oval
+    compile("net.sf.oval:oval:1.85")
+}
